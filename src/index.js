@@ -5,19 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    {/* <Hello/> */}
-    {/* <UserClick/> */}
-    {/* <StateProp/> */}
-    {/* <Listrender/> */}
-    {/* <ListAgain/> */}
-    <NameForm/>
-    {/* <Jokes/> */}
-    {/* <Api/> */}
-  </React.StrictMode>
-);
+
+
                                             //Solution 1//                       
 
 
@@ -122,7 +111,7 @@ class NameForm extends Component{
 
   handleSubmit(event) {
     alert(`Hello ${this.state.firstName} ${this.state.lastName}!`);
-            event.preventDefault();
+      event.preventDefault();
   }
 
   render(){
@@ -130,11 +119,11 @@ class NameForm extends Component{
       <form onSubmit = {this.handleSubmit}>
           <label>
               First Name:
-              <input type='text' value = {this.state.firstName} onChange = {this.handleChange} name='firstName'/>
+              <input type='text' value = {this.state.firstName} onChange = {this.handleChange}/>
           </label>
           <label>
               Last Name:
-              <input type='text' value = {this.state.lastName} onChange = {this.handleChange} name='lastName'/>
+              <input type='text' value = {this.state.lastName} onChange = {this.handleChange}/>
           </label>
           <input type='submit' value='Greet Me!' className = 'button'/>
       </form>
@@ -207,6 +196,19 @@ class NameForm extends Component{
   
 // }
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    {/* <Hello/> */}
+    {/* <UserClick/> */}
+    {/* <StateProp/> */}
+    {/* <Listrender/> */}
+    {/* <ListAgain/> */}
+    <NameForm/>
+    {/* <Jokes/> */}
+    {/* <Api/> */}
+  </React.StrictMode>
+);
 
 
 
